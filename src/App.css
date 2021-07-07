@@ -1,38 +1,80 @@
 .App {
-  text-align: center;
-}
+  --main-bg-color: #181818;
+  --square-color: #2d2d2d;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.Square {
+  background-color: var(--square-color);
+  width: 10rem;
+  height: 10rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.Square.free:hover {
+  opacity: 0.7;
+  transform: scale(1.02);
+}
+
+.Square > p {
+  margin: 0;
+}
+
+.Square.xNext > p {
+  color: #d55236;
+}
+
+.Square.oNext > p {
+  color: #43a7c1;
+}
+
+.Board {
+  background-color: var(--main-bg-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 33rem;
+  gap: 1rem;
+  place-items: center;
+}
+
+.playerContainer {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.playerContainer > span {
+  font-size: 5rem;
+  margin: 0 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.resetButton {
+  background-color: var(--square-color);
+  color: white;
+  width: 200px;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 100px;
+  margin: 2rem;
+  cursor: pointer;
+  transition: opacity 200ms;
+  font-size: 1.1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.resetButton:hover {
+  opacity: 0.8;
 }
