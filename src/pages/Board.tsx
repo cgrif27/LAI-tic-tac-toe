@@ -38,7 +38,9 @@ const Board = (): ReactElement => {
         move = Math.floor(Math.random() * board.length);
       }
 
-      const randomTime = Math.floor(Math.random() * (700 - 300 + 1) + 300);
+      const min = 400;
+      const max = 1000;
+      const randomTime = Math.floor(Math.random() * (max - min + 1) + min);
       const playerTimer = setTimeout((): void => {
         handleClick(move);
       }, randomTime);
