@@ -5,10 +5,10 @@ import { chooseRandomPlayer } from '../Utils/chooseRandomPlayer';
 
 const Board = (): ReactElement => {
   const [board, setBoard] = useState(Array(9).fill(null));
-  const [currentPlayer, setCurrentPlayer] = useState('X');
 
   const [player, setPlayer] = useState(chooseRandomPlayer());
 
+  const [currentPlayer, setCurrentPlayer] = useState('X');
   const winner = calculateWinner(board);
 
   const handleClick = useCallback(
@@ -19,6 +19,7 @@ const Board = (): ReactElement => {
       // Put an X or an O in the clicked square
       tempBoard[i] = currentPlayer;
       setBoard(tempBoard);
+
       setCurrentPlayer((prevState) => (prevState === 'X' ? 'O' : 'X'));
     },
     [board, currentPlayer, winner]
@@ -37,7 +38,14 @@ const Board = (): ReactElement => {
         move = Math.floor(Math.random() * board.length);
       }
 
-      handleClick(move);
+      const time = Math.floor(Math.random() * (700 - 300 + 1) + 300);
+      const playerTimer = setTimeout((): void => {
+        handleClick(move);
+      }, time);
+
+      return (): void => {
+        clearTimeout(playerTimer);
+      };
     }
   }, [currentPlayer, player, board, handleClick]);
 
