@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/cgrif27/LAI-tic-tac-toe/static/css/main.25e2c633.chunk.css",
-    "main.js": "/cgrif27/LAI-tic-tac-toe/static/js/main.8b3ea6a0.chunk.js",
-    "main.js.map": "/cgrif27/LAI-tic-tac-toe/static/js/main.8b3ea6a0.chunk.js.map",
+    "main.js": "/cgrif27/LAI-tic-tac-toe/static/js/main.677a1ef6.chunk.js",
+    "main.js.map": "/cgrif27/LAI-tic-tac-toe/static/js/main.677a1ef6.chunk.js.map",
     "runtime-main.js": "/cgrif27/LAI-tic-tac-toe/static/js/runtime-main.7aac1365.js",
     "runtime-main.js.map": "/cgrif27/LAI-tic-tac-toe/static/js/runtime-main.7aac1365.js.map",
-    "static/js/2.4aeb9ed7.chunk.js": "/cgrif27/LAI-tic-tac-toe/static/js/2.4aeb9ed7.chunk.js",
-    "static/js/2.4aeb9ed7.chunk.js.map": "/cgrif27/LAI-tic-tac-toe/static/js/2.4aeb9ed7.chunk.js.map",
+    "static/js/2.8bba99de.chunk.js": "/cgrif27/LAI-tic-tac-toe/static/js/2.8bba99de.chunk.js",
+    "static/js/2.8bba99de.chunk.js.map": "/cgrif27/LAI-tic-tac-toe/static/js/2.8bba99de.chunk.js.map",
     "index.html": "/cgrif27/LAI-tic-tac-toe/index.html",
     "static/css/main.25e2c633.chunk.css.map": "/cgrif27/LAI-tic-tac-toe/static/css/main.25e2c633.chunk.css.map",
-    "static/js/2.4aeb9ed7.chunk.js.LICENSE.txt": "/cgrif27/LAI-tic-tac-toe/static/js/2.4aeb9ed7.chunk.js.LICENSE.txt"
+    "static/js/2.8bba99de.chunk.js.LICENSE.txt": "/cgrif27/LAI-tic-tac-toe/static/js/2.8bba99de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7aac1365.js",
-    "static/js/2.4aeb9ed7.chunk.js",
+    "static/js/2.8bba99de.chunk.js",
     "static/css/main.25e2c633.chunk.css",
-    "static/js/main.8b3ea6a0.chunk.js"
+    "static/js/main.677a1ef6.chunk.js"
   ]
 }
