@@ -15,5 +15,7 @@ export const calculateWinner = (squares: string[]): string | null => {
 			return squares[a];
 		}
 	}
+
+	if (squares.every((value) => value !== null)) return "Draw"
 	return null;
 }

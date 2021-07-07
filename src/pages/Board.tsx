@@ -53,7 +53,13 @@ const Board = (): ReactElement => {
         </div>
       ) : (
         <div className="playerContainer">
-          <span>Winner is</span> <Square value={winner} taken />
+          {winner === 'Draw' ? (
+            <span>It's a Draw</span>
+          ) : (
+            <>
+              <span>Winner is</span> <Square value={winner} taken />
+            </>
+          )}
         </div>
       )}
       <div className="Board">
