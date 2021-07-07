@@ -75,7 +75,9 @@ const Board = (): ReactElement => {
           <Square
             key={i}
             value={square}
-            onClick={() => handleClick(i)}
+            onClick={() => {
+              if (currentPlayer === player) handleClick(i);
+            }}
             taken={square != null}
           />
         ))}
