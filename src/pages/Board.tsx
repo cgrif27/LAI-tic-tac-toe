@@ -32,7 +32,9 @@ const Board = (): ReactElement => {
   useEffect(() => {
     if (currentPlayer !== player) {
       let move = Math.floor(Math.random() * board.length);
-      while (board[move]) {
+      console.log();
+
+      while (board[move] && !board.every((value) => value !== null)) {
         move = Math.floor(Math.random() * board.length);
       }
 
