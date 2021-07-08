@@ -2,6 +2,7 @@ import React, { ReactElement, useCallback, useEffect, useState } from 'react';
 import Square from '../components/Square';
 import { calculateWinner } from '../Utils/calculateWinner';
 import { chooseRandomPlayer } from '../Utils/chooseRandomPlayer';
+import { findBestSquare } from '../Utils/opponentAI';
 
 const Board = (): ReactElement => {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -32,15 +33,13 @@ const Board = (): ReactElement => {
 
   useEffect(() => {
     if (currentPlayer !== player) {
-      let move = Math.floor(Math.random() * board.length);
+      let move = findBestSquare(board, player);
 
-      while (board[move] && !board.every((value) => value !== null)) {
-        move = Math.floor(Math.random() * board.length);
-      }
-
+      // Calculating a random time to simulate opponent delay
       const min = 400;
       const max = 1000;
       const randomTime = Math.floor(Math.random() * (max - min + 1) + min);
+
       const playerTimer = setTimeout((): void => {
         handleClick(move);
       }, randomTime);

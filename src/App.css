@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   font-size: 8rem;
   border-radius: 1rem;
